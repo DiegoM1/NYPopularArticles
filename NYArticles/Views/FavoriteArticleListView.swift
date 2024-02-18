@@ -20,9 +20,9 @@ struct FavoriteArticleListView: View {
             VStack {
                 if showContentUnavailable {
                     ContentUnavailableView(label: {
-                        Label("No favorites articles", systemImage: "star.slash")
+                        Label("No liked articles", systemImage: "star.slash")
                     }, description: {
-                        Text("Add favorites articles to check them later even without conection!")
+                        Text("Add liked articles to check them later!")
                     }, actions: {
                     })
                 } else {
@@ -38,6 +38,13 @@ struct FavoriteArticleListView: View {
                     }
                 }
             }
+            .onChange(of: favoriteArticles, { _, _ in
+                if favoriteArticles.isEmpty {
+                    showContentUnavailable = true
+                } else {
+                    showContentUnavailable = false
+                }
+            })
             .navigationBarTitleDisplayMode(.large)
             .navigationTitle("Liked Articles")
             .onAppear(perform: {
