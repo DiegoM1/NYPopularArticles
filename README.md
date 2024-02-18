@@ -1,4 +1,4 @@
-![Simulator Screen Recording - iPhone 15 - 2024-02-18 at 16 33 36](https://github.com/DiegoM1/NYPopularArticles/assets/54748910/282a43fa-6d8e-4847-8247-8868bedeb5be)# NYPopularArticles
+## NYPopularArticles
 
 SwiftUI App to show the most popular articles by share type and period of time. Development using SwiftData, async - await, ContentUnavailableView, Unit test, not third party libraries.
 
