@@ -6,7 +6,7 @@ Documentation -> developer.nytimes.com/docs/most-popular-product/1/overview
 
 ## Installation
 
-There is not third party libraries so there is any special installation but you are going to need to create a info.plist file and  create a new string value with the key "Api_key", if no the app is going to crash cause a fatal error.
+There is not third party libraries so there is any special installation but you are going to need to create a new string value with the key "Api_key" in the info.plist, if no the app is going to crash cause a fatal error.
 
 <img width="737" alt="Screenshot 2024-02-18 at 16 09 48" src="https://github.com/DiegoM1/NYPopularArticles/assets/54748910/a1dee6ee-c720-4fcd-be21-c3a1e844bb07">
 
