@@ -64,21 +64,34 @@ struct ArticleListView: View {
                                     }
                                 })
                             } else {
-                                ScrollView {
-                                    LazyVStack(alignment: .leading) {
-                                        ForEach(articles) { article in
-                                            NavigationLink {
-                                                WebView(url: URL(string: article.url)!)
-                                            } label: {
-                                                ArticleCellView(articleModel: article)
+                                ScrollViewReader { reader in
+                                    ScrollView {
+                                        LazyVStack(alignment: .leading) {
+                                            ForEach(articles) { article in
+                                                NavigationLink {
+                                                    WebView(url: URL(string: article.url)!)
+                                                } label: {
+                                                    ArticleCellView(articleModel: article)
+                                                }
+                                                .id(article.id)
+                                                if article.id != articles.last!.id {
+                                                    Divider()
+                                                }
+                                                
                                             }
-                                            Divider()
+                                        }
+                                        .padding(20)
+                                        .background(RoundedRectangle(cornerRadius: 10).fill(.white))
+                                        .foregroundStyle(.black)
+                                        .padding()
+
+
+                                        Button("", systemImage: "arrow.turn.right.up") {
+                                            withAnimation {
+                                                reader.scrollTo(articles.first?.id, anchor: .top)
+                                            }
                                         }
                                     }
-                                    .padding(20)
-                                    .background(RoundedRectangle(cornerRadius: 10).fill(.white))
-                                    .foregroundStyle(.black)
-                                    .padding()
                                 }
                             }
                         }
@@ -124,8 +137,6 @@ struct ArticleListView: View {
                     await fetchArticles()
                 }
             }
-
-            .navigationBarTitleDisplayMode(.large)
             .navigationTitle("Popular Articles")
             .task {
                 await fetchArticles()
@@ -135,5 +146,5 @@ struct ArticleListView: View {
 }
 
 #Preview {
-    ArticleListView(articleService: MockArticleServices())
+    ArticleListView(articleService: ArticleServices())
 }

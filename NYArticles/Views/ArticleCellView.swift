@@ -122,7 +122,6 @@ struct ArticleCellView: View {
                                          abstract: article.abstract,
                                          adxKeywords: article.adxKeywords,
                                          media: article.media)
-        print(modelData.persistentModelID)
         modelContext.insert(modelData)
     }
 

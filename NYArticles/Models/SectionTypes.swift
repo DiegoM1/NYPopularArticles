@@ -30,6 +30,8 @@ enum SectionTypes: String, Codable {
     case movies = "Movies"
     case obituaries = "Obituaries"
     case health = "Health"
+    case fashion = "Fashion"
+    case techonology = "Technology"
 
     func getColor() -> Color {
         switch self {
@@ -75,6 +77,10 @@ enum SectionTypes: String, Codable {
             return Color(uiColor: .tertiaryLabel)
         case .health:
             return Color(uiColor: .tertiarySystemBackground)
+        case .fashion:
+            return Color(uiColor: .secondarySystemGroupedBackground)
+        default:
+            return Color(uiColor: .darkText)
         }
 
     }
