@@ -18,54 +18,6 @@
             endingLineNumber = "87"
             landmarkName = "testBeautifulDateFormatter()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "9F583395-1169-419D-AD57-570C20FCCE08 - be330bf1671a8c39"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "NYArticlesTests.NYArticlesTests.testMockData() async throws -&gt; ()"
-                  moduleName = "NYArticlesTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/diegomonteagudodiaz/Documents/NYArticles/NYArticlesTests/NYArticlesTests.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "86"
-                  endingLineNumber = "86"
-                  offsetFromSymbolStart = "136">
-               </Location>
-               <Location
-                  uuid = "9F583395-1169-419D-AD57-570C20FCCE08 - a84d3f64a196174c"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(1) suspend resume partial function for NYArticlesTests.NYArticlesTests.testMockData() async throws -&gt; ()"
-                  moduleName = "NYArticlesTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/diegomonteagudodiaz/Documents/NYArticles/NYArticlesTests/NYArticlesTests.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "86"
-                  endingLineNumber = "86"
-                  offsetFromSymbolStart = "44">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "49E03302-1840-4E12-94D3-E43BC32D6F0B"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "NYArticles/Services/ArticleServices.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
-            landmarkName = "getArticlesBy(pathType:andPeriod:)"
-            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

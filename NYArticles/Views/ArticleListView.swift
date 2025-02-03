@@ -80,7 +80,6 @@ struct ArticleListView: View {
                                                 
                                             }
                                         }
-                                        .padding(20)
                                         .background(RoundedRectangle(cornerRadius: 10).fill(.white))
                                         .foregroundStyle(.black)
                                         .padding()

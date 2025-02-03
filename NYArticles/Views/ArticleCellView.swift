@@ -46,10 +46,13 @@ struct ArticleCellView: View {
                         .multilineTextAlignment(.leading)
                         .font(.title3).fontWeight(.bold)
                         .padding(.bottom, 2)
+                        .fixedSize(horizontal: false, vertical: true)
+
                     Text(articleModel.byline)
                         .multilineTextAlignment(.leading)
                         .font(.caption)
                         .padding(.bottom, 8)
+                        .fixedSize(horizontal: false, vertical: true)
 
                     Text(articleModel.section.rawValue)
                         .foregroundStyle(articleModel.section.getColor())
@@ -71,23 +74,27 @@ struct ArticleCellView: View {
                     .cornerRadius(10)
                 }
             }
+
             if seeMore {
-                Text(articleModel.abstract)
-                    .multilineTextAlignment(.leading)
-                    .font(.headline)
-                    .padding(.bottom, 4)
+                VStack(alignment: .leading, spacing: 0) {
+                    Text(articleModel.abstract)
+                        .multilineTextAlignment(.leading)
+                        .font(.headline)
+                        .padding(.bottom, 4)
 
-                Text("Keywords")
-                    .font(.footnote).fontWeight(.bold)
-                    .underline(true)
-                    .padding(.bottom, 4)
-                Text(articleModel.adxKeywords)
-                    .multilineTextAlignment(.leading)
-                    .font(.footnote).fontWeight(.light)
-                    .padding(.bottom, 4)
+                    Text("Keywords")
+                        .font(.footnote).fontWeight(.bold)
+                        .underline(true)
+                        .padding(.bottom, 4)
+                    Text(articleModel.adxKeywords)
+                        .multilineTextAlignment(.leading)
+                        .font(.footnote).fontWeight(.light)
+                        .padding(.bottom, 4)
 
-                Text("Published date \(articleModel.publishedDate.toDate(withFormat: "yyyy-MM-dd")?.toString(withFormat: "MMM d, yyyy") ?? "")")
-                    .font(.subheadline).fontWeight(.semibold)
+                    Text("Published date \(articleModel.publishedDate.toDate(withFormat: "yyyy-MM-dd")?.toString(withFormat: "MMM d, yyyy") ?? "")")
+                        .font(.subheadline).fontWeight(.semibold)
+                }
+                .transition(.blurReplace)
             }
 
             HStack(alignment: .center) {
@@ -106,9 +113,9 @@ struct ArticleCellView: View {
             })
             .foregroundStyle(.blue)
             .contentTransition(.symbolEffect(.replace))
-
             .padding(.top, 4)
         }
+        .padding(20)
     }
 
     func addItem(article: ModelDataProtocol) {
@@ -141,7 +148,7 @@ struct ArticleCellView: View {
                                                updated: "2024-02-13 11:35:55",
                                                section: .arts,
                                                byline: "By Mike Hale",
-                                               title: "The super Bowl ads, Ranked", adxKeywords: "Actors and Actresses, photography;Cooper, Bradly;Ruffalo, Mark;Randolph",
+                                               title: "The super Bowl ads, Ranked, The super Bowl ads, Ranked ", adxKeywords: "Actors and Actresses, photography;Cooper, Bradly;Ruffalo, Mark;Randolph",
                                                abstract: "Here is how our critic saw the Super Bowl commercials from the best to worst.", media: [ArticleMediaModel(type: "Image",
                                                                                                                                                                     subtype: "photo",
                                                                                                                                                                     caption: "Christopher Walken stars in a BMW ad that pokes fun at people's tendency to impersonate",
