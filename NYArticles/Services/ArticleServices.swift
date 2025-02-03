@@ -16,7 +16,7 @@ class ArticleServices: ArticleServicesProtocol {
 
     func getArticlesBy(pathType: PathsType, andPeriod period: Period) async throws -> ArticleResponse {
 
-        guard let apiKey = Bundle.main.infoDictionary?["Api_key"] as? String  else {
+        guard let apiKey = Bundle.main.infoDictionary?["API_KEY"] as? String  else {
             fatalError("**WARNING** Api key cant be found")
         }
         let url = URL(string: defaultPath + pathType.rawValue + "/\(period.rawValue).json?api-key=\(apiKey)")!

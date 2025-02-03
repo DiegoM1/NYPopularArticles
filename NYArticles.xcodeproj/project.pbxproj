@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		221E61D22D507CF200E3785A /* Secrets.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 221E61D12D507BB800E3785A /* Secrets.xcconfig */; };
 		222CA4932B810F9700566645 /* NYArticlesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222CA4922B810F9700566645 /* NYArticlesApp.swift */; };
 		222CA4952B810F9700566645 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222CA4942B810F9700566645 /* ContentView.swift */; };
 		222CA4992B810F9800566645 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 222CA4982B810F9800566645 /* Assets.xcassets */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		221E61D12D507BB800E3785A /* Secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
 		222CA48F2B810F9700566645 /* NYArticles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NYArticles.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		222CA4922B810F9700566645 /* NYArticlesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYArticlesApp.swift; sourceTree = "<group>"; };
 		222CA4942B810F9700566645 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 		222CA4862B810F9700566645 = {
 			isa = PBXGroup;
 			children = (
+				221E61D12D507BB800E3785A /* Secrets.xcconfig */,
 				222CA4912B810F9700566645 /* NYArticles */,
 				222CA4C92B817B0B00566645 /* NYArticlesTests */,
 				222CA4902B810F9700566645 /* Products */,
@@ -253,6 +256,7 @@
 			files = (
 				222CA49C2B810F9800566645 /* Preview Assets.xcassets in Resources */,
 				222CA4992B810F9800566645 /* Assets.xcassets in Resources */,
+				221E61D22D507CF200E3785A /* Secrets.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,6 +432,7 @@
 		};
 		222CA4A02B810F9800566645 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 221E61D12D507BB800E3785A /* Secrets.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -458,6 +463,7 @@
 		};
 		222CA4A12B810F9800566645 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 221E61D12D507BB800E3785A /* Secrets.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
